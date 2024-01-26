@@ -1,0 +1,370 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;700&display=swap");
+
+body {
+  font-family: "Cabin", Arial;
+  color: white;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+header:after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(33, 33, 33, 0.8);
+  -webkit-backdrop-filter: blur(15px);
+  backdrop-filter: blur(15px);
+  z-index: 10;
+}
+
+header .container {
+  z-index: 11;
+  position: relative;
+}
+
+nav ul {
+  display: flex;
+  list-style-type: none;
+}
+
+nav ul li {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  line-height: 28px;
+}
+
+.flex {
+  display: flex;
+}
+
+.a-i-c {
+  align-items: center;
+}
+
+header .flex .flex {
+  flex-grow: 1;
+}
+
+.justify-content-between {
+  justify-content: space-between;
+}
+
+#logo {
+  margin-right: 60px;
+}
+
+section {
+  height: 100svh;
+  min-height: 100%;
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+section p {
+  font-size: 25px;
+  font-weight: 100;
+  margin-top: 10px;
+}
+
+h1 {
+  margin-top: 100px;
+  font-stretch: normal;
+  font-size: 62px;
+  line-height: 88px;
+}
+
+section.bg-image {
+  background-size: cover;
+  background-position: center center;
+}
+
+section#hero {
+  background-image: url(assets/images/hero.jpeg);
+  text-align: center;
+}
+
+.container {
+  width: 90%;
+  max-width: 1420px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+section#hero .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+section#hero form {
+  margin-bottom: 30px;
+}
+
+section a {
+  font-size: 12px;
+  font-weight: 700;
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+form input {
+  height: 50px;
+}
+
+form input[type="text"] {
+  padding: 0 40px 0 26px;
+  background: transparent;
+  border: 2px solid hsla(0, 0%, 100%, 0.6);
+  font-size: medium;
+  background: hsla(0, 0%, 100%, 0.15);
+  color: white;
+  margin-right: 15px;
+  max-width: 400px;
+  width: 100%;
+}
+
+form input[type="text"]::placeholder {
+  color: white;
+}
+
+form input[type="submit"] {
+  background: #fafafa;
+  border-radius: 4px;
+  font-stretch: normal;
+  max-width: 180px;
+  width: 100%;
+  font-weight: 500;
+  font-stretch: normal;
+  font-size: 12px;
+  line-height: 18px;
+  cursor: pointer;
+  height: 50px;
+  border: none;
+}
+
+form input[type="text"]:focus {
+  border: 2px solid #fff;
+  outline: none;
+}
+
+section#targets {
+  background-color: black;
+  background-image: url(assets/images/home-illustration-1.jpeg);
+  background-size: 50%;
+  background-position: left -25%;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  padding-top: 40px;
+  padding-bottom: 120px;
+  min-height: 100svh;
+  height: auto;
+}
+
+#power-users {
+  font-weight: 700;
+  font-stretch: normal;
+  font-size: 36px;
+  text-align: center;
+  margin-bottom: 20px;
+  margin-top: 150px;
+}
+
+#power-users + p {
+  margin-bottom: 150px;
+}
+
+#targets p {
+  font-weight: 400;
+  font-stretch: normal;
+  font-size: 16px;
+  text-align: center;
+}
+
+#targets .target-info p {
+  text-align: left;
+}
+
+#target-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+}
+
+a.target-block {
+  min-height: 700px;
+  display: block;
+  overflow: hidden;
+  position: relative;
+}
+
+.target-image {
+  height: 100%;
+}
+
+a.target-block:hover .target-image > img {
+  transform: scale(1.05);
+  filter: brightness(110%);
+  z-index: 9;
+}
+
+.target-image > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease-in, filter 0.3s ease-in;
+}
+
+.target-info h2 {
+  font-weight: 700;
+  font-stretch: normal;
+  font-size: 32px;
+}
+
+.target-info {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+  z-index: 7;
+}
+
+#feature {
+  background-image: url(assets/images/conntectivity.jpeg);
+  background-size: cover;
+  background-position: center;
+  height: 100svh;
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
+#feature h2 {
+  font-weight: 700;
+  font-stretch: normal;
+  font-size: 32px;
+  line-height: 1.5;
+  margin-bottom: 5px;
+}
+
+.w50 {
+  width: 50%;
+  max-width: 460px;
+}
+
+#targets .w50 p {
+  font-weight: 400;
+  font-stretch: normal;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: left;
+}
+
+section#get-online {
+  background: black;
+  min-height: 100svh;
+  height: auto;
+  padding-bottom: 0;
+}
+#video-thumbnail {
+  position: relative;
+}
+
+#video-thumbnail a {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#video-thumbnail a svg {
+  width: 150px;
+  height: 150px;
+}
+
+#video-thumbnail > img {
+  width: 100%;
+}
+
+#no-contracts {
+  background-color: black;
+  background-image: url(assets/images/home-illustration-1.jpeg);
+  background-size: 50%;
+  background-position: left -25%;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  padding-top: 240px;
+  padding-bottom: 120px;
+  min-height: 100svh;
+  height: auto;
+}
+
+#get-online .w50,
+#no-contracts .w50 {
+  max-width: unset;
+}
+
+#no-contracts img {
+  width: 100%;
+}
+
+#eng-by-spacex {
+  background-image: url(assets/images/spacex.jpeg);
+  background-size: cover;
+  background-position: center;
+  height: 100svh;
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
+#eng-by-spacex h2 {
+  font-weight: 700;
+  font-stretch: normal;
+  font-size: 32px;
+  line-height: 1.5;
+  margin-bottom: 5px;
+}
+
+#eng-by-spacex .w50 p {
+  font-weight: 400;
+  font-stretch: normal;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: left;
+}
+
+section#hero-footer {
+  background-image: url(assets/images/home-illustration-2.jpeg);
+  text-align: center;
+  background-color: black;
+  background-size: 50%;
+  background-position: right -25%;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  padding-top: 40px;
+  padding-bottom: 120px;
+  min-height: 100svh;
+  height: auto;
+}
